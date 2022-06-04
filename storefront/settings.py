@@ -29,9 +29,27 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:8001'
+    'http://localhost:8001',
+    'http://localhost:8000',
 ]
 
+# smpt is the default but i've left this in for reference
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.file.EmailBackend'
+
+# FIXME: For security, please move these to .env variables when ready for production!
+EMAIL_HOST = 'localhost'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_PORT = 2525
+DEFAULT_FROM_EMAIL = 'tanjiro@demonslayer.ca'
+
+# specify admins for email, they'll be contact when using mail_admins()
+ADMINS = [
+    ('Tanjiro', 'tanjiro@demonslayer.ca'),
+    ('Rengoku', 'rengoku@demonslayer.ca'),
+]
 
 # Application definition
 
