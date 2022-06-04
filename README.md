@@ -42,5 +42,5 @@ The project is configured to send an email when you visit
 Once the page loads, you can navigate to the SMPT admin where you should find an
 email waiting.
 
-Note: For the email to send make sure the SMPT server we started earlier and the
-Django development server are both running! 🙃
+**Note:** For the email to send make sure the SMPT server we started earlier and
+the Django development server are both running! 🙃
